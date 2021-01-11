@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(MyApp());
@@ -26,8 +27,10 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 100, left: 65.0),
+            SizedBox(
+              height: 80.0,
+            ),
+            Center(
               child: RichText(
                 text: TextSpan(
                     text: 'Your Secret\nSanta',
@@ -39,8 +42,10 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30, left: 40.0),
+            SizedBox(
+              height: 50.0,
+            ),
+            Center(
               child: RichText(
                 text: TextSpan(
                     text:
@@ -52,6 +57,16 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
               ),
             ),
+            SizedBox(
+              height: 100.0,
+            ),
+            Stack(children: [
+              Image.asset(
+                'assets/santa-claus.png',
+                width: 320,
+                height: 400.0,
+              ),
+            ])
           ],
         ),
       ),
