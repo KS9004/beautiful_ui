@@ -66,6 +66,43 @@ class _HomePageState extends State<HomePage> {
                 width: 320,
                 height: 400.0,
               ),
+              Padding(
+                padding: EdgeInsets.only(left: 230.0, right: 15.0),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Color(0xff7077eb),
+                  ),
+                  child: MaterialButton(
+                    child: Text(
+                      "Let's Begin",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+                    onPressed: null,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 222.0, right: 8.0),
+                child: Transform.rotate(
+                  angle: pi / 80.0,
+                  child: Container(
+                    height: 48.0,
+                    width: double.infinity,
+                    child: OutlineButton(
+                        borderSide:
+                            BorderSide(color: Color(0xff7077eb), width: 3.0),
+                        onPressed: null,
+                        shape: new RoundedRectangleBorder(
+                            side: BorderSide(color: Color(0xff7077eb)),
+                            borderRadius: new BorderRadius.circular(15.0))),
+                  ),
+                ),
+              )
             ])
           ],
         ),
