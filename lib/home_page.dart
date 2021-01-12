@@ -1,3 +1,4 @@
+import 'package:beautiful_ui/home_page2.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
                     text: 'Your Secret\nSanta',
                     style: TextStyle(
                         color: Color(0xffefb570),
-                        fontSize: 50,
+                        fontSize: 50.0,
                         fontWeight: FontWeight.bold),
                     children: []),
                 textAlign: TextAlign.center,
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             Stack(children: [
               Image.asset(
                 'assets/santa-claus.png',
-                width: 320,
+                width: 320.0,
                 height: 400.0,
               ),
               Padding(
@@ -69,7 +70,12 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    onPressed: null,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SecondScreen()));
+                    },
                   ),
                 ),
               ),
