@@ -70,12 +70,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SecondScreen()));
-                    },
+                    onPressed: null,
                   ),
                 ),
               ),
@@ -89,7 +84,12 @@ class _HomePageState extends State<HomePage> {
                     child: OutlineButton(
                         borderSide:
                             BorderSide(color: Color(0xff7077eb), width: 3.0),
-                        onPressed: null,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SecondScreen()));
+                        },
                         shape: new RoundedRectangleBorder(
                             side: BorderSide(color: Color(0xff7077eb)),
                             borderRadius: new BorderRadius.circular(15.0))),
