@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     color: Color(0xff7077eb),
                   ),
+                  // ignore: missing_required_param
                   child: MaterialButton(
                     child: Text(
                       "Let's Begin",
@@ -70,7 +71,6 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    onPressed: null,
                   ),
                 ),
               ),

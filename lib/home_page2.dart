@@ -129,9 +129,8 @@ class StackWidget extends StatelessWidget {
           color: Color(0xff7077eb),
           image: DecorationImage(image: AssetImage(image), fit: BoxFit.contain),
         ),
-        child: MaterialButton(
-          onPressed: null,
-        ),
+        // ignore: missing_required_param
+        child: MaterialButton(),
       ),
       Transform.rotate(
         angle: -pi / 2.0,
