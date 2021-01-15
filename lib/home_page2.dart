@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class SecondScreen extends StatefulWidget {
   @override
@@ -84,10 +85,68 @@ class _SecondScreenState extends State<SecondScreen> {
                     fontSize: 40.0,
                     fontWeight: FontWeight.bold),
               ),
+            ),
+            SizedBox(
+              height: 60.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                StackWidget(
+                  name: "Music",
+                  image: "assets/headphones.png",
+                ),
+                StackWidget(
+                  name: "Music",
+                  image: "assets/book.png",
+                ),
+                StackWidget(
+                  name: "Music",
+                  image: "assets/sport.png",
+                ),
+              ],
             )
           ],
         ),
       ),
     );
+  }
+}
+
+class StackWidget extends StatelessWidget {
+  StackWidget({this.name, this.image});
+  final String name;
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(children: [
+      Container(
+        height: 100.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: Color(0xff7077eb),
+          image: DecorationImage(image: AssetImage(image), fit: BoxFit.contain),
+        ),
+        child: MaterialButton(
+          onPressed: null,
+        ),
+      ),
+      Transform.rotate(
+        angle: -pi / 2.0,
+        child: Container(
+          height: 100.0,
+          width: 100.0,
+          child: OutlineButton(
+              borderSide: BorderSide(color: Color(0xff7077eb), width: 3.0),
+              onPressed: () {},
+              shape: new RoundedRectangleBorder(
+                side: BorderSide(color: Color(0xff7077eb)),
+                borderRadius: new BorderRadius.circular(20.0),
+              )),
+        ),
+      ),
+    ]);
   }
 }
